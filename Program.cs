@@ -4,28 +4,44 @@
     {
         static void Main(string[] args)
         {
-            int randomNum = new Random().Next(1, 51);
 
-            Console.Write("Hi! Let's play a game! Guess a number between 1 and 50: ");
-            int guess = GetValidGuess();
+            bool playAgain = true;
 
-            int totalTries = 10;
-
-
-            for (int guesses = 1; guesses < totalTries && guess != randomNum; guesses++)
+            do
             {
-                Console.Write($"Wrong guess! {totalTries - guesses} tries left. Try again: ");
-                guess = GetValidGuess();
-            }
+                Console.Clear(); //Clear the console for a fresh start
+                int randomNum = new Random().Next(1, 51);
 
-            if (guess == randomNum)
-            {
-                Console.WriteLine($"Congratulations! You guessed the number: {randomNum}");
-            }
-            else
-            {
-                Console.WriteLine($"Sorry! You ran out of tries! The number was: {randomNum}");
-            }
+                Console.Write("Hi! Let's play a game! Guess a number between 1 and 50: ");
+                int guess = GetValidGuess();
+
+                int totalTries = 10;
+
+
+                for (int guesses = 1; guesses < totalTries && guess != randomNum; guesses++)
+                {
+                    Console.Write($"Wrong guess! {totalTries - guesses} tries left. Try again: ");
+                    guess = GetValidGuess();
+                }
+
+                if (guess == randomNum)
+                {
+                    Console.WriteLine($"Congratulations! You guessed the number: {randomNum}");
+                }
+                else
+                {
+                    Console.WriteLine($"Sorry! You ran out of tries! The number was: {randomNum}");
+                }
+                //Play again?
+                Console.Write("Do you want to play again? (Y/N): ");
+                string respone = Console.ReadLine().Trim().ToUpper();
+                if (respone != "Y")
+                {
+                    playAgain = false;
+                    Console.WriteLine("Thanks for playing! Goodbye!");
+                }
+
+            } while (playAgain);
         }
         //Helper method to get a valid guess from the user
         private static int GetValidGuess()
