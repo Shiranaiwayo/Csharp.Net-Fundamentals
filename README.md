@@ -8,7 +8,7 @@ The purpose of this repository is to gather my continuous learning journey in on
 
 Each directory represents a specific module or core topic from my C# and .NET studies:
 
-*   **`01-loops-and-arrays/`** – Practice with `for`, `foreach`, and `while` loops alongside basic array manipulation.
+*   **`01-fundamentals/`** – Practice with variables, user input validation, loops alongside basic array manipulation.
 *   **`02-methods-and-functions/`** – Creating reusable code blocks, understanding parameters (`out`/`ref`), and return types.
 *   **`03-oop-principles/`** – Object-Oriented Programming core concepts: Classes, Objects, Inheritance, Polymorphism, and Encapsulation.
 *   **`04-interfaces-and-abstract-classes/`** – Implementing interfaces, abstract classes, and achieving loose coupling in code.
