@@ -6,29 +6,6 @@ namespace Menu
     {
         static void Main(string[] args)
         {
-            //Menu exercise with switch
-
-            //Console.WriteLine("Choose one of the following foods: \n1. Pizza \n2. Burger \n3. Salad");
-            //int choice = GetValidInput(1, 3);
-
-            //switch (choice)
-            //{
-            //    case 1:
-            //        Console.WriteLine("Here is your Pizza!");
-            //        break;
-            //    case 2:
-            //        Console.WriteLine("Here is your Burger!");
-            //        break;
-            //    case 3:
-            //        Console.WriteLine("Here is your Salad!");
-            //        break;
-            //    default:
-            //        Console.WriteLine("That input is not valid. Please choose a number between 1 and 3.");
-            //        break;
-            //}
-
-            //Improvement with array, foreach, input validation, as well as rerun ability
-
             string[] foods = { "Pizza", "Burger", "Salad" };
             //for input through Command Prompt
             if(args.Length > 0 )
@@ -38,6 +15,7 @@ namespace Menu
                 Console.WriteLine("Thank you for dining with us today!");
             }
 
+            //Interactive menu
             bool isRunning = true;
             while (isRunning)
             {
