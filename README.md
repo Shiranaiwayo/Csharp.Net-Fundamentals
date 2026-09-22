@@ -16,7 +16,7 @@ Each directory represents a specific module or core topic from my C# and .NET st
 
 ## 🛠️ Tech Stack & Skills Covered
 
-*   **Language & Framework:** C#, .NET Core / .NET 8
+*   **Language & Framework:** C#, .NET Core / .NET 8 and Powershell
 *   **Version Control:** Git & GitHub (Structured branching, meaningful commits)
 *   **Concepts:** OOP (Object-Oriented Programming), Clean Code, and Debugging.
 

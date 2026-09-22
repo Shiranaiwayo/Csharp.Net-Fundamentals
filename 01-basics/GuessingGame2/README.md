@@ -12,25 +12,5 @@ An interactive and robust console-based guessing game built while learning C# an
 - **Language:** C#
 - **Framework:** .NET 8.0 / .NET 9.0 (Console Application)
 
-## 📦 How to Run the Project Locally
-
-To run this game on your machine, ensure you have the [.NET SDK](https://microsoft.com) installed.
-
-1. **Clone this repository:**
-   ```bash
-   git clone https://github.com
-   cd Guessing-game-csharp
-   ```
-
-2. **Build the project:**
-   ```bash
-   dotnet build
-   ```
-
-3. **Start the game:**
-   ```bash
-   dotnet run
-   ```
-
 ## 📈 Future Goals
-In the next phase, I plan to expand this project by adding difficulty levels (e.g., varying the number of allowed tries or changing the range of numbers) and introducing a local high-score system to track the fewest attempts taken to win.
+In the next phase, I hope to expand this project by adding difficulty levels (e.g., varying the number of allowed tries or changing the range of numbers) and introducing a local high-score system to track the fewest attempts taken to win.
