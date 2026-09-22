@@ -1,14 +1,11 @@
 <Solution>
-  <Folder Name="/01-basics/">
-    <Project Path="01-basics/GuessingGame2/GuessingGame2.csproj" />
-    <Project Path="01-basics/Menu/Menu.csproj" />
+  <Folder Name="/GuessingGame1/">
+    <Project Path="GuessingGame1/Guessing game/Guessing game.csproj" Id="aeee9541-5f00-498a-8930-8c1c3a1e2ad1" />
   </Folder>
-  <Folder Name="/01-basics/GuessingGame1/">
-    <Project Path="01-basics/GuessingGame1/Guessing game/Guessing game.csproj" Id="aeee9541-5f00-498a-8930-8c1c3a1e2ad1" />
-  </Folder>
-  <Folder Name="/02-methods-and-functions/">
-    <Project Path="02-methods-and-functions/Calculator/Calculator.csproj" />
-    <Project Path="02-methods-and-functions/CalculatorLibrary/CalculatorLibrary.csproj" />
-  </Folder>
-  <Project Path="00-evolving-projects/HomePageGenerator/HomePageGenerator.csproj" Id="e754b775-dccc-4efb-96ad-ebb6501cadbf" />
+  <Project Path="Calculator/Calculator.csproj" />
+  <Project Path="Calculator/CalculatorLibrary/CalculatorLibrary.csproj" />
+  <Project Path="GuessingGame2/GuessingGame2.csproj" />
+  <Project Path="HomePageGenerator/HomePageGenerator.csproj" />
+  <Project Path="Menu/Menu.csproj" />
+  <Project Path="RomanNumeralConverter/RomanNumeralConverter.csproj" />
 </Solution>
