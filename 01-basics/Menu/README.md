@@ -22,33 +22,6 @@ To see how much this project has improved, here is the journey of the codebase:
 - **Language:** C#
 - **Framework:** .NET 8.0 / .NET 9.0 (Console Application)
 
-## 📦 How to Run the Project Locally
-
-Ensure you have the [.NET SDK](https://microsoft.com) installed before running.
-
-1. **Clone this repository:**
-   ```bash
-   git clone https://github.com
-   cd Menu
-   ```
-
-2. **Build the project:**
-   ```bash
-   dotnet build
-   ```
-
-3. **Standard Mode (Interactive Menu):**
-   Runs the full loop and asks if you want to order another dish.
-   ```bash
-   dotnet run
-   ```
-
-4. **Argument Mode (Direct Command):**
-   Skips the interactive menu and outputs the meal directly (e.g., Choice 1 = Pizza).
-   ```bash
-   dotnet run 1
-   ```
-
 ## 📈 Future Goals
-Moving forward, I intend to expand this script by transforming it into a master hub—a single navigation control panel that links and runs my other mini-projects (like a Calculator or a Guessing Game) directly from this single application menu.
+Moving forward, I hope to expand this script by transforming it into a master hub—a single navigation control panel that links and runs my other mini-projects (like a Calculator or a Guessing Game) directly from this single application menu.
 
