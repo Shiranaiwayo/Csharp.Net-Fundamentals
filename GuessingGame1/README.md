@@ -11,3 +11,4 @@ A fun, interactive console-based guessing game built while learning the fundamen
 ## 🛠️ Built With
 - **Language:** C#
 - **Framework:** .NET (Console Application)
+- **IDE** Visual Studio Community
