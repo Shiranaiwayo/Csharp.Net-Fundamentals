@@ -2,6 +2,7 @@
   <Folder Name="/GuessingGame1/">
     <Project Path="GuessingGame1/Guessing game/Guessing game.csproj" Id="aeee9541-5f00-498a-8930-8c1c3a1e2ad1" />
   </Folder>
+  <Project Path="BasicSearchFunction/BasicSearchFunction.csproj" Id="7add54a2-62f4-4d5d-8b00-f347b0a3755c" />
   <Project Path="Calculator/Calculator.csproj" />
   <Project Path="Calculator/CalculatorLibrary/CalculatorLibrary.csproj" />
   <Project Path="GuessingGame2/GuessingGame2.csproj" />
