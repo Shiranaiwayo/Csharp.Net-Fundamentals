@@ -1,28 +1,42 @@
-# 🚀 C# & .NET Fundamentals Exercises
+# 🚀 C# & .NET Fundamentals
 
-Welcome to my central repository for C# and .NET fundamental exercises and coding projects. 
+A collection of C# and .NET projects built to strengthen programming fundamentals through hands-on development.
 
-This monorepo contains a collection of small C# and .NET projects created to practice and reinforce fundamental programming concepts. Each project focuses on a specific problem or application while providing hands-on experience with C# syntax, program structure, problem solving, and development practices.
+This repository documents my progression from basic console applications toward more structured C#/.NET development, with a focus on **clean code, problem solving, input validation, reusable methods, and object-oriented programming**.
 
-## 📂 Repository Structure
+## 📂 Projects
 
-*   **`Calculator/`** – A simple console-based calculator for performing basic arithmetic operations. Practices user input, data types, operators, and conditional logic.
-*   **`GuessingGame1/`** – A number-guessing game where the user tries to guess a randomly generated number. Practices loops, conditional statements, user input, and random number generation.
-*   **`GuessingGame2/`** – An extended version of the guessing game with additional functionality and logic. Practices program flow, loops, user input, and problem solving.
-*   **`HomePageGenerator/`** – A small application that generates a homepage based on user input. Practices strings, methods, variables, and basic program structure.
-*   **`Menu/`** – A console-based menu application that allows the user to select and execute different options. Practices loops, switch statements, methods, and user input..
-*   **`RomanNumeralConverter/`** – A program that converts numbers into Roman numerals. Practices methods, loops, conditional logic, and algorithmic problem solving.
+| Project                                                  | Description                                                                                                         |
+| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| 🧮 **[Calculator](./Calculator/)**                       | Console calculator demonstrating arithmetic operations, input validation, exceptions, and a separate class library. |
+| 🎮 **[GuessingGame1](./GuessingGame1/)**                 | Number-guessing game focused on loops, conditionals, random numbers, and user interaction.                          |
+| 🎯 **[GuessingGame2](./GuessingGame2/)**                 | Extended guessing game with input validation, replay functionality, and structured methods.                         |
+| 🏠 **[HomePageGenerator](./HomePageGenerator/)**         | Project scaffold for a future console-based homepage generator.                                                     |
+| 🍔 **[Menu](./Menu/)**                                   | Interactive menu demonstrating methods, arrays, input validation, recursion, and command-line arguments.            |
+| 🔢 **[RomanNumeralConverter](./RomanNumeralConverter/)** | Project scaffold for a future number-to-Roman-numeral converter.                                                    |
 
-## 🛠️ Tech Stack & Skills Covered
+## 🛠️ Technologies & Skills
 
-*   **Language & Framework:** C#, .NET 8
-*   **Version Control:** Git & GitHub (Structured branching, meaningful commits)
-*   **Concepts:** OOP (Object-Oriented Programming), Clean Code, and Debugging.
+* **C#**
+* **.NET / .NET Framework**
+* Console applications
+* Object-oriented programming
+* Methods & classes
+* Input validation & exception handling
+* Loops & conditional logic
+* Arrays & basic algorithms
+* Command-line arguments
+* Git & GitHub
+* Visual Studio
 
 ## 🎯 Goals
 
-*   Strengthen my understanding of C# and .NET fundamentals through practical projects.
-*   Practice writing clean, readable, and maintainable code.
-*   Improve problem-solving and debugging skills.
-*   Build a solid foundation for developing larger C#/.NET applications.
-*   Gradually expand the repository with more advanced projects as my skills develop.
+* Build a strong foundation in C# and .NET development.
+* Improve code quality, structure, and problem-solving skills.
+* Progress from small exercises toward larger, practical applications.
+* Continue expanding into **LINQ, unit testing, APIs, databases, ASP.NET Core, and cloud development**.
+
+---
+
+> **Work in progress:** This repository evolves alongside my C#/.NET learning journey.
+

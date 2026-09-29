@@ -1,27 +1,21 @@
 # 📋 C# Console Menu System
 
-An interactive console-based navigation system built while mastering C# and .NET structure. This project focuses on building structured, scalable menus using loop-driven execution, dual-mode argument parsing, and recursive choice validation.
+An interactive console-based menu built while learning C# and .NET. The project focuses on methods, arrays, input validation, recursion, and command-line arguments.
 
-## 🔄 Project Evolution: How it Started vs. How it is Now
-
-To see how much this project has improved, here is the journey of the codebase:
-
-1. **The Beginning (Linear & Static):** 
-   Originally, the program was purely linear. It displayed three food items, read a single input, matched it using a `foreach` loop with `Array.IndexOf`, and then instantly shut down. If the user wanted another dish, they had to manually restart the entire application.
-2. **The Evolution (Persistent & Dynamic):** 
-   - **Interactive Looping:** Introduced a continuous lifecycle loop controlled by an `isRunning` state, allowing users to order multiple times until choosing to exit (`y/n`).
-   - **Command-Line Integration:** Upgraded the `Main(string[] args)` method to intercept startup arguments. Users can now bypass the interactive menu entirely by passing their choice directly when launching the application.
-   - **Polymorphic Validation:** Refactored the `GetValidInput` helper method into a flexible tool. By utilizing a default/optional parameter (`string inputStr = null`), the same method now seamlessly processes both terminal text streams and command-line arguments, using recursion to fall back safely to user prompts if an invalid argument is supplied.
-
-## 🚀 Key Practices & Features
-- **Dual-Mode Input Processing:** Supports standard interactive runtime execution as well as instant startup execution via `args`.
-- **Recursive Fail-Safe Validation:** Wrapped inputs in conditional checks that catch invalid numbers or boundary overflows without crashing.
-- **Clean Architecture:** Removed all deprecated and commented-out code, relying entirely on Git version control history for tracking older iterations.
+## 🚀 What I Practiced
+* **Methods:** Created reusable methods to handle menu selection and input validation.
+* **Input Validation:** Used `int.TryParse` to ensure the user enters a valid menu option within the allowed range.
+* **Arrays:** Stored menu items in an array and used `Array.IndexOf` to identify the selected item.
+* **Recursion:** Used a recursive method call to handle invalid input and request a valid selection again.
+* **Optional Parameters:** Used an optional parameter to allow the input validation method to accept either user input or a provided value.
+* **Command-Line Arguments:** Added support for passing a menu selection through command-line arguments.
 
 ## 🛠️ Built With
 - **Language:** C#
-- **Framework:** .NET 8.0 / .NET 9.0 (Console Application)
+- **Framework:** .NET 10.0 (Console Application)
+- **IDE:** Visual Studio Community
 
-## 📈 Future Goals
-Moving forward, I hope to expand this script by transforming it into a master hub—a single navigation control panel that links and runs my other mini-projects (like a Calculator or a Guessing Game) directly from this single application menu.
+## 📈 Learning Goals
+This project is part of my ongoing C# learning journey. Future improvements could include adding more menu items, separating the menu logic into classes, and improving the overall program structure.
+
 

@@ -1,16 +1,44 @@
-# 🧮 C# Console Calculator Exercises
+# 🧮 C# Console Calculator
 
-A collection of foundational console-based application exercises built while learning C# and .NET. This project focuses on mastering loops, conditional logic, and basic user input handling.
+A console-based calculator built with **C# and .NET**. The project supports basic arithmetic operations and separates the calculation logic into a reusable class library.
 
-## 🚀 What I Practiced
-- **Control Flow:** Implementing `while` and `do-while` loops to keep the application running until the user decides to exit.
-- **Conditional Logic:** Using `switch` statements and `if/else` blocks to process different mathematical operations.
-- **Data Validation:** Handling user inputs securely to prevent crashes from invalid numbers or dividing by zero.
+## 🚀 Features
+
+* Addition, subtraction, multiplication, and division
+* Numeric input validation using `double.TryParse`
+* Operator validation
+* Division-by-zero handling
+* Interactive calculation loop
+* Operation logging using `System.Diagnostics.Trace`
+* Separate `CalculatorLibrary` project referenced by the console application
+
+## 🧠 What I Practiced
+
+* C# methods and classes
+* `switch` statements
+* Input validation
+* Exception handling
+* Regular expressions
+* Project references
+* Separating application logic from reusable functionality
+* Basic logging
 
 ## 🛠️ Built With
-- **Language:** C#
-- **Framework:** .NET 8.0 / .NET 9.0 (Console Application)
 
-## 📈 Learning Goals
-This repository serves as a personal archive of my coding journey. Going forward, I plan to look at object-oriented programming (OOP) principles, custom classes, and unit testing.
+* **C#**
+* **.NET 10**
+* **Visual Studio**
+* **Git & GitHub**
+
+## ▶️ Running the Project
+
+Clone the repository, open the solution in Visual Studio, and run the `Calculator` project.
+
+Alternatively, from the project directory:
+
+```bash
+dotnet run
+```
+
+> This project is part of my [C# & .NET Fundamentals](../) repository and represents an early step toward more structured C# applications.
 

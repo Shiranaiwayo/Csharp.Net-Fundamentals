@@ -1,16 +1,24 @@
 # 🎯 C# Console Guessing Game
 
-An interactive and robust console-based guessing game built while learning C# and .NET. This project focuses on advanced error handling, logical loops, and dynamic user experiences.
+An interactive console-based guessing game built while learning C# and .NET. This project focuses on loops, methods, input validation, random number generation, and basic program flow.
 
 ## 🚀 What I Practiced
-- **Do-While Loops:** Implemented a main application loop to make the game fully interactive, allowing the user to replay seamlessly without manually restarting the program.
-- **Secure Data Validation:** Utilized `int.TryParse` to build a crash-proof input system that elegantly handles invalid inputs (like text or symbols) without crashing the application.
-- **Random Number Generation:** Used the `Random` class to dynamically generate a secret target number within a specific range (1–50) for each unique round.
-- **String Sanitization:** Employed `.Trim().ToUpper()` to clean and normalize user responses when confirming if they want to play again.
+* **Do-While Loops:** Used a `do-while` loop to allow the player to start a new round after completing a game.
+* **Input Validation:** Used `int.TryParse` to handle non-numeric input without crashing the application and added range validation to ensure guesses are between 1 and 50.
+* **Random Number Generation:** Used the `Random` class to generate a secret number between 1 and 50 for each round.
+* **Methods:** Separated the guess validation and input handling into a reusable `GetValidGuess()` method.
+* **String Handling:** Used `.Trim().ToUpper()` when processing the player's response to the replay prompt.
 
 ## 🛠️ Built With
 - **Language:** C#
 - **Framework:** .NET 8.0 / .NET 9.0 (Console Application)
+- **IDE:** Visual Studio Community
 
 ## 📈 Future Goals
-In the next phase, I hope to expand this project by adding difficulty levels (e.g., varying the number of allowed tries or changing the range of numbers) and introducing a local high-score system to track the fewest attempts taken to win.
+* Add different difficulty levels with varying numbers of attempts.
+* Allow the player to choose the number range.
+* Track the number of attempts used in each round.
+* Add a high-score system based on the fewest attempts.
+
+
+
