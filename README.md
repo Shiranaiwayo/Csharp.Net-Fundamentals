@@ -6,14 +6,15 @@ This repository documents my progression from basic console applications toward 
 
 ## 📂 Projects
 
-| Project                                                  | Description                                                                                                         |
-| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| 🧮 **[Calculator](./Calculator/)**                       | Console calculator demonstrating arithmetic operations, input validation, exceptions, and a separate class library. |
-| 🎮 **[GuessingGame1](./GuessingGame1/)**                 | Number-guessing game focused on loops, conditionals, random numbers, and user interaction.                          |
-| 🎯 **[GuessingGame2](./GuessingGame2/)**                 | Extended guessing game with input validation, replay functionality, and structured methods.                         |
-| 🏠 **[HomePageGenerator](./HomePageGenerator/)**         | Project scaffold for a future console-based homepage generator.                                                     |
-| 🍔 **[Menu](./Menu/)**                                   | Interactive menu demonstrating methods, arrays, input validation, recursion, and command-line arguments.            |
-| 🔢 **[RomanNumeralConverter](./RomanNumeralConverter/)** | Project scaffold for a future number-to-Roman-numeral converter.                                                    |
+| Project                                                  | Description                                                                                                              |
+| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| 🔎 **[BasicSearchFunction](./BasicSearchFunction/)**     | Console application that searches for a person's age by name using a dictionary, input validation, and a `Person` class. |
+| 🧮 **[Calculator](./Calculator/)**                       | Console calculator demonstrating arithmetic operations, input validation, exceptions, and a separate class library.      |
+| 🎮 **[GuessingGame1](./GuessingGame1/)**                 | Number-guessing game focused on loops, conditionals, random numbers, and user interaction.                               |
+| 🎯 **[GuessingGame2](./GuessingGame2/)**                 | Extended guessing game with input validation, replay functionality, and structured methods.                              |
+| 🏠 **[HomePageGenerator](./HomePageGenerator/)**         | Project scaffold for a future console-based homepage generator.                                                          |
+| 🍔 **[Menu](./Menu/)**                                   | Interactive menu demonstrating methods, arrays, input validation, recursion, and command-line arguments.                 |
+| 🔢 **[RomanNumeralConverter](./RomanNumeralConverter/)** | Project scaffold for a future number-to-Roman-numeral converter.                                                         |
 
 ## 🛠️ Technologies & Skills
 
