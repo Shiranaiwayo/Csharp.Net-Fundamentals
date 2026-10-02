@@ -14,7 +14,7 @@ This repository documents my progression from basic console applications toward 
 | 🎯 **[GuessingGame2](./GuessingGame2/)**                 | Extended guessing game with input validation, replay functionality, and structured methods.                              |
 | 🏠 **[HomePageGenerator](./HomePageGenerator/)**         | Project scaffold for a future console-based homepage generator.                                                          |
 | 🍔 **[Menu](./Menu/)**                                   | Interactive menu demonstrating methods, arrays, input validation, recursion, and command-line arguments.                 |
-| 🔢 **[RomanNumeralConverter](./RomanNumeralConverter/)** | Project scaffold for a future number-to-Roman-numeral converter.                                                         |
+| 🔢 **[RomanNumeralCon](./RomanNumeralConverter/)**       | Converter using arrays, loops, conditionals, and user input.                                                       |
 
 ## 🛠️ Technologies & Skills
 
