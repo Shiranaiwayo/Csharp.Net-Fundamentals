@@ -39,7 +39,6 @@ namespace CalculatorProgram
                     numInput2 = Console.ReadLine();
                 }
 
-                //Ask user to choose the operator.
                 Console.WriteLine("Choose an operator from the following list:");
                 Console.WriteLine("\ta - Add");
                 Console.WriteLine("\ts - Subtract");
@@ -71,19 +70,9 @@ namespace CalculatorProgram
                 Console.WriteLine("-----------------------\n");
                 Console.Write("Press 'n' and Enter to close the app, or press any other key and Enter to continue: ");
                 if (Console.ReadLine() == "n") endApp = true;
-
             }
-
             return;
         }
-
-
-        
-
-
-
-
-
 
     }
 }

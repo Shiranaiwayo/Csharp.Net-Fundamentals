@@ -4,21 +4,23 @@
     {
         static void Main(string[] args)
         {
-            var top = "<!DOCTYPE html>" +
-               "<html>" +
-               "<body>";
+            var html = "<!DOCTYPE html>\n" +
+               "<html>\n" +
+               "<body>\n";
 
-            var headline = "<h1>Välkomna!</h1>";
+            html += "<h1>Välkomna!</h1>\n";
 
-            var courses = "<p>Kurs om C#</p>" +
-                            "<p>Kurs om Databaser</p>" +
-                            "<p>Kurs om Webbutveckling</p>" +
-                            "<p>Kurs om Clean code</p>";
+            string[] courseList = {" C#", "daTAbaser", "csharp fORTsäTtning", "WebbuTVeCkling ", "clean Code  "};
 
-            var end = "</body>" +
-                          "</html>";
+            foreach (var course in courseList)
+            {
+                string formattedCourse = course.Trim().ToLower();
+                formattedCourse = char.ToUpper(formattedCourse[0]) + formattedCourse.Substring(1); 
+                html += $"<p>Kurs om {formattedCourse}</p>\n";
+            }
 
-            var html = top + headline + courses + end;
+            html += "</body>\n" +
+                    "</html>\n";
 
             Console.WriteLine(html);
         }

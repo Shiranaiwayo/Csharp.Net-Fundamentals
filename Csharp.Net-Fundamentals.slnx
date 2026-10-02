@@ -9,4 +9,5 @@
   <Project Path="HomePageGenerator/HomePageGenerator.csproj" />
   <Project Path="Menu/Menu.csproj" />
   <Project Path="RomanNumeralConverter/RomanNumeralConverter.csproj" />
+  <Project Path="Tic-Tac-Toe/Tic-Tac-Toe.csproj" Id="514f5af3-1ff7-41c7-954f-ff122805b45f" />
 </Solution>

@@ -6,29 +6,33 @@ This repository documents my progression from basic console applications toward 
 
 ## 📂 Projects
 
-| Project                                                  | Description                                                                                                              |
-| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| 🔎 **[BasicSearchFunction](./BasicSearchFunction/)**     | Console application that searches for a person's age by name using a dictionary, input validation, and a `Person` class. |
-| 🧮 **[Calculator](./Calculator/)**                       | Console calculator demonstrating arithmetic operations, input validation, exceptions, and a separate class library.      |
-| 🎮 **[GuessingGame1](./GuessingGame1/)**                 | Number-guessing game focused on loops, conditionals, random numbers, and user interaction.                               |
-| 🎯 **[GuessingGame2](./GuessingGame2/)**                 | Extended guessing game with input validation, replay functionality, and structured methods.                              |
-| 🏠 **[HomePageGenerator](./HomePageGenerator/)**         | Project scaffold for a future console-based homepage generator.                                                          |
-| 🍔 **[Menu](./Menu/)**                                   | Interactive menu demonstrating methods, arrays, input validation, recursion, and command-line arguments.                 |
-| 🔢 **[RomanNumeralCon](./RomanNumeralConverter/)**       | Converter using arrays, loops, conditionals, and user input.                                                       |
+| Project                                              | Description                                                                                                              |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| 🔎 **[BasicSearchFunc](./BasicSearchFunction/)**     | Console application that searches for a person's age by name using a dictionary, input validation, and a `Person` class. |
+| 🧮 **[Calculator](./Calculator/)**                   | Console calculator demonstrating arithmetic operations, input validation, exceptions, and a separate class library.      |
+| 🎮 **[GuessingGame1](./GuessingGame1/)**             | Number-guessing game focused on loops, conditionals, random numbers, and user interaction.                               |
+| 🎯 **[GuessingGame2](./GuessingGame2/)**             | Extended guessing game with input validation, replay functionality, and structured methods.                              |
+| 🏠 **[HomePageGen](./HomePageGenerator/)**           | Project scaffold for a future console-based homepage generator.                                                          |
+| 🍔 **[Menu](./Menu/)**                               | Interactive menu demonstrating methods, arrays, input validation, recursion, and command-line arguments.                 |
+| 🔢 **[RomanNumeralCon](./RomanNumeralConverter/)**   | Converter using arrays, loops, conditionals, and user input.                                                             |
+| 🎮 **[TicTacToe](./TicTacToe/)**                     | Two-player console game demonstrating arrays, loops, input validation, turn switching, and win or draw detection.        |
 
 ## 🛠️ Technologies & Skills
 
 * **C#**
 * **.NET / .NET Framework**
-* Console applications
-* Object-oriented programming
-* Methods & classes
-* Input validation & exception handling
-* Loops & conditional logic
-* Arrays & basic algorithms
+* Console Applications
+* Object-Oriented Programming
+* Methods & Classes
+* Input validation & Exception handling
+* Loops & Conditional logic
+* Arrays & Collections
+* String Manipulation
+* Basic algorithms & Game logic
 * Command-line arguments
 * Git & GitHub
 * Visual Studio
+* Powershell
 
 ## 🎯 Goals
 
