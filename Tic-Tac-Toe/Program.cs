@@ -1,162 +1,132 @@
-﻿namespace Tic_Tac_Toe
+﻿namespace Tic_Tac_Toe;
+
+internal class Program
 {
-    internal class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        string[] board = { " ", " ", " ", " ", " ", " ", " ", " ", " " };
+
+        var currentPlayer = 1;
+        var gameOver = false;
+
+        while (!gameOver)
         {
-            string[] board = { " ", " ", " ", " ", " ", " ", " ", " ", " " };
+            DisplayBoard(board);
+            var symbol = GetSymbol(currentPlayer);
 
-            var currentPlayer = 1;
-            var gameOver = false;
+            Console.Write($"Player {currentPlayer}, choose a square (1-9): ");
+            
+            var index = GetValidMove(board);
 
-            while (!gameOver)
+            board[index] = symbol;
+
+            if (CheckWinner(board, symbol))
             {
-                Console.Clear();
-
-                Console.WriteLine("Tic-Tac-Toe\n");
-                //Shows board
-                for (int i = 0; i < board.Length; i++)
-                {
-                    Console.Write($" {board[i]} ");
-
-                    if ((i + 1) % 3 != 0)
-                    {
-                        Console.Write("|");
-                    }
-
-                    if ((i + 1) % 3 == 0 && i < board.Length - 1)
-                    {
-                        Console.WriteLine("\n---+---+---");
-                    }
-                }
-
-                Console.WriteLine("\n");
-
-                //Who is playing?
-                string symbol;
-
-                if (currentPlayer == 1)
-                {
-                    symbol = "X";
-                }
-                else
-                {
-                    symbol = "O";
-                }
-
-                Console.Write($"Player {currentPlayer}, choose a square (1-9): ");
-                string input = Console.ReadLine();
-
-                if (!int.TryParse(input, out int choice))
-                {
-                    Console.WriteLine("That is not a number.");
-                    Console.ReadKey();
-                    continue;
-                }
-
-                if (choice < 1 || choice > 9)
-                {
-                    Console.WriteLine("That is not a number between 1 and 9.");
-                    Console.ReadKey();
-                    continue;
-                }
-
-                int index = choice - 1;
-
-                if (board[index] != " ")
-                {
-                    Console.WriteLine("That square is occupied!");
-                    Console.ReadKey();
-                    continue;
-                }
-
-                board[index] = symbol;
-
-                if (
-                    // Rows
-                    (board[0] == symbol && board[1] == symbol && board[2] == symbol) ||
-                    (board[3] == symbol && board[4] == symbol && board[5] == symbol) ||
-                    (board[6] == symbol && board[7] == symbol && board[8] == symbol) ||
-                    // Columns
-                    (board[0] == symbol && board[3] == symbol && board[6] == symbol) ||
-                    (board[1] == symbol && board[4] == symbol && board[7] == symbol) ||
-                    (board[2] == symbol && board[5] == symbol && board[8] == symbol) ||
-                    // Diagonals
-                    (board[0] == symbol && board[4] == symbol && board[8] == symbol) ||
-                    (board[2] == symbol && board[4] == symbol && board[6] == symbol)
-                   )
-                {
-                    gameOver = true;
-
-                    //Show winning board
-                    Console.Clear();
-
-                    for (int i = 0; i < board.Length; i++)
-                    {
-                        Console.Write($" {board[i]} ");
-
-                        if ((i + 1) % 3 != 0)
-                        {
-                            Console.Write("|");
-                        }
-
-                        if ((i + 1) % 3 == 0 && i < board.Length - 1)
-                        {
-                            Console.WriteLine("\n---+---+---");
-                        }
-                    }
-
-                    Console.WriteLine($"\n\nPlayer {currentPlayer} won!");
-                }
-                else
-                {
-                    //check if all squares are occupied
-                    bool draw = true;
-
-                    foreach (string square in board)
-                    {
-                        if (square == " ")
-                        {
-                            draw = false;
-                            break;
-                        }
-                    }
-
-                    if (draw)
-                    {
-                        gameOver = true;
-                        //Show final board
-                        Console.Clear();
-                        for (int i = 0; i < board.Length; i++)
-                        {
-                            Console.Write($" {board[i]} ");
-
-                            if ((i + 1) % 3 != 0)
-                            {
-                                Console.Write("|");
-                            }
-
-                            if ((i + 1) % 3 == 0 && i < board.Length - 1)
-                            {
-                                Console.WriteLine("\n---+---+---");
-                            }
-                        }
-                        Console.WriteLine("\n\nIt's a draw!");
-                    }
-                    else
-                    {
-                        //Switch player
-                        if (currentPlayer == 1)
-                        {
-                            currentPlayer = 2;
-                        }
-                        else
-                        {
-                            currentPlayer = 1;
-                        }
-                    }
-                }
+                gameOver = true;
+                //Show winning board
+                DisplayBoard(board);
+                Console.WriteLine($"\nPlayer {currentPlayer} won!");
+            }
+            else if (CheckDraw(board))
+            {
+                gameOver = true;
+                //Show final board
+                DisplayBoard(board);
+                Console.WriteLine("\nIt's a draw!");
+            }
+            else
+            {
+                currentPlayer = SwitchPlayer(currentPlayer);
             }
         }
     }
+    static void DisplayBoard(string[] board)
+    {
+        Console.Clear();
+        Console.WriteLine("Tic-Tac-Toe\n");
+        for (var square = 0; square < board.Length; square++)
+        {
+            if (board[square] == " ")
+            {
+                Console.Write($" {square + 1} ");
+            }
+            else
+            {
+                Console.Write($" {board[square]} ");
+            }
+
+            if ((square + 1) % 3 != 0)
+            {
+                Console.Write("|");
+            }
+
+            if ((square + 1) % 3 == 0 && square < board.Length - 1)
+            {
+                Console.WriteLine("\n---+---+---");
+            }
+        }
+        Console.WriteLine("\n");
+    }
+    static int ValidateInput()
+    {
+        while (true)
+        {
+            var input = Console.ReadLine();
+
+            if (int.TryParse(input, out int choice) && choice >= 1 && choice <= 9)
+            {
+                return choice;
+            }
+
+            Console.Write("Please enter a number between 1 and 9: ");
+        }
+    }
+    static int GetValidMove(string[] board)
+    {
+        while (true)
+        {
+            var choice = ValidateInput();
+            var index = choice - 1;
+
+            if (board[index] == " ")
+            {
+                return index;
+            }
+
+            Console.Write("That square is occupied! Try again: ");
+        }
+    }
+    static string GetSymbol(int currentPlayer)
+    {
+        return currentPlayer == 1 ? "X" : "O";
+    }
+    static bool CheckWinner(string[] board, string symbol)
+    {
+        return
+            (board[0] == symbol && board[1] == symbol && board[2] == symbol) ||
+            (board[3] == symbol && board[4] == symbol && board[5] == symbol) ||
+            (board[6] == symbol && board[7] == symbol && board[8] == symbol) ||
+            (board[0] == symbol && board[3] == symbol && board[6] == symbol) ||
+            (board[1] == symbol && board[4] == symbol && board[7] == symbol) ||
+            (board[2] == symbol && board[5] == symbol && board[8] == symbol) ||
+            (board[0] == symbol && board[4] == symbol && board[8] == symbol) ||
+            (board[2] == symbol && board[4] == symbol && board[6] == symbol);
+    }
+    static bool CheckDraw(string[] board)
+    {
+        foreach (string square in board)
+        {
+            if (square == " ")
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    static int SwitchPlayer(int currentPlayer)
+    {
+        return currentPlayer == 1 ? 2 : 1;
+    }
 }
+
+

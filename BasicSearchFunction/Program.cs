@@ -15,7 +15,7 @@ internal class Program
         myDictionary.Add("Niklas", 31);
 
         Console.WriteLine($"Whose age do you want to inquire about? Choose from below: ");
-        foreach (string name in myDictionary.Keys)
+        foreach (var name in myDictionary.Keys)
         {
             Console.WriteLine(name);
         }
@@ -23,7 +23,7 @@ internal class Program
         var shouldContinue = true;
         while (shouldContinue)
         {
-            string input = Console.ReadLine()?.Trim() ?? "";
+            var input = Console.ReadLine()?.Trim() ?? "";
 
             if (!string.IsNullOrWhiteSpace(input))
             {

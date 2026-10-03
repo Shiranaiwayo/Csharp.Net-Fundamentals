@@ -1,16 +1,15 @@
-﻿# 🌐 C# HTML Course List Generator
+﻿# 🌐 C# Homepage Generator
 
-A simple C# console-based application built while learning string manipulation, arrays, loops, and HTML generation. The application takes a list of course names, formats the text consistently, and dynamically generates a basic HTML page containing the courses.
+A simple C# console-based homepage generator that dynamically creates an HTML page with a welcome message, announcements, and a list of courses. The project focuses on methods, arrays, loops, string manipulation, and basic HTML generation.
 
 ## 🚀 Key Logic & Features
 
-* **Course Array:** Stores multiple course names using a `string[]`.
-* **String Formatting:** Uses `Trim()`, `ToLower()`, `ToUpper()`, and `Substring()` to clean and format course names.
-* **Looping:** Uses a `foreach` loop to process each course in the array.
-* **HTML Generation:** Dynamically builds an HTML document using C# strings.
-* **String Interpolation:** Uses `$""` to insert formatted course names into HTML elements.
-* **Dynamic Content:** Each course is automatically added as a `<p>` element.
-* **Console Output:** Prints the completed HTML document to the console.
+* **Homepage Generator:** Dynamically generates a basic HTML homepage.
+* **Methods:** Separates HTML generation into `HtmlTop()`, `HtmlBody()`, and `HtmlEnd()`.
+* **Arrays:** Stores courses and messages using `string[]`.
+* **String Formatting:** Cleans and formats course names using string methods.
+* **Optional Parameters:** Uses an optional parameter for homepage messages.
+* **Dynamic HTML:** Inserts courses and messages into the generated HTML.
 
 ## 🛠️ Built With
 

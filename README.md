@@ -12,10 +12,10 @@ This repository documents my progression from basic console applications toward 
 | 🧮 **[Calculator](./Calculator/)**                   | Console calculator demonstrating arithmetic operations, input validation, exceptions, and a separate class library.      |
 | 🎮 **[GuessingGame1](./GuessingGame1/)**             | Number-guessing game focused on loops, conditionals, random numbers, and user interaction.                               |
 | 🎯 **[GuessingGame2](./GuessingGame2/)**             | Extended guessing game with input validation, replay functionality, and structured methods.                              |
-| 🏠 **[HomePageGen](./HomePageGenerator/)**           | Project scaffold for a future console-based homepage generator.                                                          |
+| 🏠 **[HomePageGen](./HomePageGenerator/)**           | Console application that generates a basic HTML page using string manipulation, arrays, loops, and dynamic HTML generation. |
 | 🍔 **[Menu](./Menu/)**                               | Interactive menu demonstrating methods, arrays, input validation, recursion, and command-line arguments.                 |
 | 🔢 **[RomanNumeralCon](./RomanNumeralConverter/)**   | Converter using arrays, loops, conditionals, and user input.                                                             |
-| 🎮 **[TicTacToe](./TicTacToe/)**                     | Two-player console game demonstrating arrays, loops, input validation, turn switching, and win or draw detection.        |
+| 🎮 **[TicTacToe](./TicTacToe/)**                     | Two-player console game demonstrating arrays, methods, input validation, turn switching, and win or draw detection.        |
 
 ## 🛠️ Technologies & Skills
 
