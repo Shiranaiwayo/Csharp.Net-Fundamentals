@@ -10,15 +10,31 @@ internal class Program
             "Deadline för inlämning är 16/10!",
             "Lycka till med programmeringen!" };
 
-        var html = HtmlTop(".NET26S", messages) + HtmlBody(courses) + HtmlEnd();
+        var websiteGenerator = new WebsiteGenerator();
+
+        var html = websiteGenerator.HtmlTop(".NET26S", messages) + 
+            websiteGenerator.HtmlBody(courses) + 
+            websiteGenerator.HtmlEnd();
 
         Console.WriteLine(html);
     }
-    static string HtmlTop(string who, string[] optionalMessages = null)
+    
+}
+public class WebsiteGenerator
+{
+    private string _htmlTop = """
+        <!DOCTYPE html>
+        <html>
+        <body>
+        """;
+    private string _htmlEnd = """
+        </body>\n
+        </html>\n
+        """;
+
+    public string HtmlTop(string who, string[] optionalMessages = null)
     {
-        var html = "<!DOCTYPE html>\n" +
-            "<html>\n" +
-            "<body>\n" +
+        var html = _htmlTop+
             $"<h1>Välkomna {who}!</h1>\n";
         if (optionalMessages != null)
         {
@@ -32,7 +48,7 @@ internal class Program
         return html;
     }
 
-    static string HtmlBody(string[] courses)
+    public string HtmlBody(string[] courses)
     {
         var html = "<main>\n";
         foreach (var course in courses)
@@ -44,11 +60,9 @@ internal class Program
         html += "</main>\n";
         return html;
     }
-    static string HtmlEnd()
+    public string HtmlEnd()
     {
-        var html = "</body>\n" +
-                   "</html>\n";
-        return html;
+        return _htmlEnd;
     }
 }
 
