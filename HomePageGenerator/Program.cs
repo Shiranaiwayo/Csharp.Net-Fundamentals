@@ -28,9 +28,9 @@ internal class Program
 }
 public class WebsiteGenerator
 {
-    private string _className;
-    private string[] _courses;
-    private string[] _messages;
+    private readonly string _className;
+    private readonly string[] _courses;
+    private readonly string[] _messages;
 
     public WebsiteGenerator(string className, string[] courses, string[]? messages = null)
     {
