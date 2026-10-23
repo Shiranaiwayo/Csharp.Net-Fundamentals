@@ -6,63 +6,78 @@ internal class Program
     {
         string[] courses = { " C#", "daTAbaser", "c# fORTsäTtning", "WebbuTVeCkling ", "clean Code  " };
 
-        string[] messages = { "Kom ihåg att läsa dagens material.",
+        string[] messages = 
+        { 
+            "Kom ihåg att läsa dagens material.",
             "Deadline för inlämning är 16/10!",
-            "Lycka till med programmeringen!" };
+            "Lycka till med programmeringen!" 
+        };
 
-        var websiteGenerator = new WebsiteGenerator();
+        var website1 = new WebsiteGenerator(".NET26S", courses, messages);
 
-        var html = websiteGenerator.HtmlTop(".NET26S", messages) + 
-            websiteGenerator.HtmlBody(courses) + 
-            websiteGenerator.HtmlEnd();
+        var website2 = new WebsiteGenerator(
+            ".NET27S", 
+            new[] { "C#", "Databaser" },
+            new[] { "Välkomna till den nya kursen!", "Vi ses på tisdag!" }
+            );
 
-        Console.WriteLine(html);
+        Console.WriteLine(website1.GenerateHtml());
+        Console.WriteLine(website2.GenerateHtml());
     }
-    
+
 }
 public class WebsiteGenerator
 {
-    private string _htmlTop = """
-        <!DOCTYPE html>
-        <html>
-        <body>
-        """;
-    private string _htmlEnd = """
-        </body>\n
-        </html>\n
-        """;
+    private readonly string _className;
+    private readonly string[] _courses;
+    private readonly string[] _messages;
 
-    public string HtmlTop(string who, string[] optionalMessages = null)
+    public WebsiteGenerator(string className, string[] courses, string[]? messages = null)
     {
-        var html = _htmlTop+
-            $"<h1>Välkomna {who}!</h1>\n";
-        if (optionalMessages != null)
+        _className = className;
+        _courses = courses;
+        _messages = messages ?? Array.Empty<string>();
+    }
+    
+
+    public string GenerateHtml()
+    {
+        return HtmlTop() + HtmlBody() + HtmlEnd();
+    }
+    private string HtmlTop()
+    {
+        var html = $"""
+            <!DOCTYPE html>
+            <html>
+            <body>
+            <h1>Välkomna {_className}!</h1>\n
+            """;
+
+        var index = 1;
+        foreach (var message in _messages)
         {
-            var index = 1;
-            foreach (var message in optionalMessages)
-            {
-                html += $"<p><b>Meddelande {index}:</b> {message}</p>\n";
-                index++;
-            }
+            html += $"<p><b>Meddelande {index}:</b> {message}</p>\n";
+            index++;
         }
         return html;
     }
 
-    public string HtmlBody(string[] courses)
+    private string HtmlBody()
     {
         var html = "<main>\n";
-        foreach (var course in courses)
+        foreach (var course in _courses)
         {
             var formattedCourse = course.Trim().ToLower();
+            if (formattedCourse.Length == 0) 
+                continue;
             formattedCourse = char.ToUpper(formattedCourse[0]) + formattedCourse.Substring(1);
             html += $"<p>Kurs om {formattedCourse}</p>\n";
         }
-        html += "</main>\n";
-        return html;
+        return html + "</main>\n";
     }
-    public string HtmlEnd()
+    private string HtmlEnd()
     {
-        return _htmlEnd;
+        return "</body>\n</html>\n";
     }
 }
 
