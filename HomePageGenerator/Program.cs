@@ -28,18 +28,63 @@ internal class Program
 }
 public class WebsiteGenerator
 {
-    private readonly string _className;
-    private readonly string[] _courses;
-    private readonly string[] _messages;
+    private string _className = "";
+    private string[] _courses = Array.Empty<string>();
+    private string[] _messages = Array.Empty<string>();
+
+    public string ClassName
+    { 
+        get => _className; 
+        set
+        {
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                throw new ArgumentException("Klassnamnet får inte vara tomt.");
+            }
+            _className = value.Trim();
+        }
+    }
+    public string[] Courses
+    {
+        get => _courses;
+        set
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException(nameof(Courses));
+            }
+
+            if (value.Any(course => string.IsNullOrWhiteSpace(course)))
+            {
+                throw new ArgumentException("Kursnamn får inte vara tomma.");
+            }
+            _courses = value;
+        }
+    }
+    public string[] Messages
+    {
+        get => _messages;
+        set
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException(nameof(Messages));
+            }
+            if (value.Any(message => string.IsNullOrWhiteSpace(message)))
+            {
+                throw new ArgumentException("Meddelanden får inte vara tomma.");
+            }
+            _messages = value;
+        }
+    }
 
     public WebsiteGenerator(string className, string[] courses, string[]? messages = null)
     {
-        _className = className;
-        _courses = courses;
-        _messages = messages ?? Array.Empty<string>();
+        ClassName = className;
+        Courses = courses;
+        Messages = messages ?? Array.Empty<string>();
     }
     
-
     public string GenerateHtml()
     {
         return HtmlTop() + HtmlBody() + HtmlEnd();
@@ -50,7 +95,8 @@ public class WebsiteGenerator
             <!DOCTYPE html>
             <html>
             <body>
-            <h1>Välkomna {_className}!</h1>\n
+            <h1>Välkomna {_className}!</h1>
+
             """;
 
         var index = 1;
