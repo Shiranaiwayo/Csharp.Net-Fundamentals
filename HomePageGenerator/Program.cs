@@ -21,8 +21,12 @@ internal class Program
             new[] { "Välkomna till den nya kursen!", "Vi ses på tisdag!" }
             );
 
-        Console.WriteLine(website1.GenerateHtml());
-        Console.WriteLine(website2.GenerateHtml());
+        //Console.WriteLine(website1.GenerateHtml());
+        //Console.WriteLine(website2.GenerateHtml());
+
+        var styledWebsite = new StyledWebsiteGenerator(".NET26S", courses, "red", messages);
+
+        Console.WriteLine(styledWebsite.GenerateHtml());
     }
 
 }
