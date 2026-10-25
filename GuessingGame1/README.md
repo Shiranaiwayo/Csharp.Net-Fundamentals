@@ -6,7 +6,7 @@ A fun, interactive console-based guessing game built while learning the fundamen
 - **Random Number Generation:** Uses the C# `Random` class to ensure a unique target number every game.
 - **Game Loops:** Employs conditional loops to keep the game active until the player guesses correctly or runs out of tries.
 - **Interactive Feedback:** Provides real-time "too high" or "too low" hints to guide the user's next input.
-- **Input Filtering:** Handles basic validation to ensure the player enters valid numbers.
+- **User Input:** Reads the player's guesses and converts them into integers using `Convert.ToInt32()`.
 
 ## 🛠️ Built With
 - **Language:** C#

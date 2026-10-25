@@ -15,7 +15,7 @@ This repository documents my progression from basic console applications toward 
 | 🏠 **[HomePageGen](./HomePageGenerator/)**           | Console application that generates a basic HTML page using string manipulation, arrays, loops, and dynamic HTML generation. |
 | 🍔 **[Menu](./Menu/)**                               | Interactive menu demonstrating methods, arrays, input validation, recursion, and command-line arguments.                 |
 | 🔢 **[RomanNumeralCon](./RomanNumeralConverter/)**   | Converter using arrays, loops, conditionals, and user input.                                                             |
-| 🎮 **[TicTacToe](./TicTacToe/)**                     | Two-player console game demonstrating arrays, methods, input validation, turn switching, and win or draw detection.        |
+| 🎮 **[TicTacToe](./Tic-Tac-Toe/)**                     | Two-player console game demonstrating arrays, methods, input validation, turn switching, and win or draw detection.        |
 
 ## 🛠️ Technologies & Skills
 
