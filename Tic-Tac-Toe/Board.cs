@@ -2,17 +2,20 @@
 
 public class Board
 {
-    private string[] _squares =
+    private readonly string[] _squares =
     {
         " ", " ", " ",
         " ", " ", " ",
         " ", " ", " "
     };
-
     public void Display()
     {
         Console.Clear();
-        Console.WriteLine("Tic-Tac-Toe\n");
+        Console.WriteLine("""
+            ***********
+            Tic-Tac-Toe
+            ***********
+            """);
         for (var square = 0; square < _squares.Length; square++)
         {
             if (_squares[square] == " ")
@@ -38,14 +41,21 @@ public class Board
     }
     public void PlaceSymbol(int index, string symbol)
     {
+        if (index < 0 || index >= _squares.Length)
+            throw new ArgumentOutOfRangeException(nameof(index));
+
+        if (symbol != "X" && symbol != "O")
+            throw new ArgumentException("Symbol must be X or O.");
+
+        if (!IsEmpty(index))
+            throw new InvalidOperationException("Square is already occupied.");
+
         _squares[index] = symbol;
     }
-
     public bool IsEmpty(int index)
     {
         return _squares[index] == " ";
     }
-
     public bool CheckWinner(string symbol)
     {
         return
@@ -68,7 +78,6 @@ public class Board
                 return false;
             }
         }
-
         return true;
     }
 

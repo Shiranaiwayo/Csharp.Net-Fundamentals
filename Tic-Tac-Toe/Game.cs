@@ -2,21 +2,39 @@
 
 public class Game
 {
-    private Board _board = new Board();
-    private int _currentPlayer = 1;
+    private readonly Board _board = new();
+    private Player _player1;
+    private Player _player2;
+    private Player _currentPlayer;
+
+    private Player RegisterPlayer(int number, string symbol)
+    {
+        string? name;
+
+        do
+        {
+            Console.Write($"Enter name for Player {number} ({symbol}): ");
+            name = Console.ReadLine()?.Trim();
+        } while (string.IsNullOrWhiteSpace(name));
+        return new Player(name, symbol);
+    }
 
     public void Start()
     {
+        _player1 = RegisterPlayer(1, "X");
+        _player2 = RegisterPlayer(2, "O");
+        _currentPlayer = _player1;
+
         var gameOver = false;
 
         while (!gameOver)
         {
             _board.Display();
-            var symbol = GetSymbol(_currentPlayer);
+            var symbol = _currentPlayer.Symbol;
 
-            Console.Write($"Player {_currentPlayer}, choose a square (1-9): ");
+            Console.Write($"{_currentPlayer.Name} ({_currentPlayer.Symbol}), choose a square (1-9): ");
 
-            var index = GetValidMove(_board);
+            var index = GetValidMove();
 
             _board.PlaceSymbol(index, symbol);
 
@@ -24,7 +42,7 @@ public class Game
             {
                 gameOver = true;
                 _board.Display();
-                Console.WriteLine($"\nPlayer {_currentPlayer} won!");
+                Console.WriteLine($"\n{_currentPlayer.Name} won!");
             }
             else if (_board.CheckDraw())
             {
@@ -34,11 +52,10 @@ public class Game
             }
             else
             {
-                _currentPlayer = SwitchPlayer(_currentPlayer);
+                SwitchPlayer();
             }
         }
     }
-
     private int ValidateInput()
     {
         while (true)
@@ -53,31 +70,24 @@ public class Game
             Console.Write("Please enter a number between 1 and 9: ");
         }
     }
-
-    private int GetValidMove(Board board)
+    private int GetValidMove()
     {
         while (true)
         {
             var choice = ValidateInput();
             var index = choice - 1;
 
-            if (board.IsEmpty(index))
+            if (_board.IsEmpty(index))
             {
                 return index;
             }
-
             Console.Write("That square is occupied! Try again: ");
         }
     }
 
-    private string GetSymbol(int currentPlayer)
+    private void SwitchPlayer()
     {
-        return currentPlayer == 1 ? "X" : "O";
-    }
-
-    private int SwitchPlayer(int currentPlayer)
-    {
-        return currentPlayer == 1 ? 2 : 1;
+        _currentPlayer = _currentPlayer == _player1 ? _player2 : _player1;
     }
 }
 
