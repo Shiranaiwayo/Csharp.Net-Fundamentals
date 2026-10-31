@@ -60,6 +60,10 @@ public class WebsiteGenerator : WebsiteGeneratorBase
     }
 
     public override string GenerateHtml() => HtmlTop() + HtmlBody() + HtmlEnd();
+    public void RenderHtmlPage(IHtmlPage page)
+    {
+        HtmlUtilities.DisplayHtmlInBrowser(_className, page.GetHtml());
+    }
     protected virtual string PrintHead() => "<head>\n</head>";
     private string HtmlTop()
     {

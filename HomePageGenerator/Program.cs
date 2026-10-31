@@ -28,10 +28,11 @@ internal class Program
 
         //Console.WriteLine(styledWebsite.GenerateHtml());
 
-        HtmlUtilities.DisplayHtmlInBrowser(".NET26S", styledWebsite.GenerateHtml());
+        var page = new HtmlPage(styledWebsite.GenerateHtml());
+        styledWebsite.RenderHtmlPage(page);
 
     }
-
 }
+
 
 
