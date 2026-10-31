@@ -26,8 +26,12 @@ internal class Program
 
         var styledWebsite = new StyledWebsiteGenerator(".NET26S", courses, "red", messages);
 
-        Console.WriteLine(styledWebsite.GenerateHtml());
+        //Console.WriteLine(styledWebsite.GenerateHtml());
+
+        HtmlUtilities.DisplayHtmlInBrowser(".NET26S", styledWebsite.GenerateHtml());
+
     }
 
 }
+
 

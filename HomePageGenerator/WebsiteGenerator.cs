@@ -1,6 +1,6 @@
 ﻿namespace HomePageGenerator;
 
-public class WebsiteGenerator
+public class WebsiteGenerator : WebsiteGeneratorBase
 {
     private string _className = "";
     private string[] _courses = Array.Empty<string>();
@@ -59,7 +59,7 @@ public class WebsiteGenerator
         Messages = messages ?? Array.Empty<string>();
     }
 
-    public string GenerateHtml() => HtmlTop() + HtmlBody() + HtmlEnd();
+    public override string GenerateHtml() => HtmlTop() + HtmlBody() + HtmlEnd();
     protected virtual string PrintHead() => "<head>\n</head>";
     private string HtmlTop()
     {
