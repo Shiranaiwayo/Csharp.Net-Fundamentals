@@ -1,4 +1,6 @@
-﻿namespace Tic_Tac_Toe;
+﻿using System.Text;
+
+namespace Tic_Tac_Toe;
 
 public class Board
 {
@@ -8,36 +10,40 @@ public class Board
         " ", " ", " ",
         " ", " ", " "
     };
-    public void Display()
+    public string GetDisplay()
     {
-        Console.Clear();
-        Console.WriteLine("""
-            ***********
-            Tic-Tac-Toe
-            ***********
-            """);
+        var display = new StringBuilder();
+
+        display.AppendLine("""
+        ***********
+        Tic-Tac-Toe
+        ***********
+        """);
+
         for (var square = 0; square < _squares.Length; square++)
         {
             if (_squares[square] == " ")
             {
-                Console.Write($" {square + 1} ");
+                display.Append($" {square + 1} ");
             }
             else
             {
-                Console.Write($" {_squares[square]} ");
+                display.Append($" {_squares[square]} ");
             }
 
             if ((square + 1) % 3 != 0)
             {
-                Console.Write("|");
+                display.Append("|");
             }
 
             if ((square + 1) % 3 == 0 && square < _squares.Length - 1)
             {
-                Console.WriteLine("\n---+---+---");
+                display.AppendLine("\n---+---+---");
             }
         }
-        Console.WriteLine("\n");
+        display.AppendLine("\n");
+
+        return display.ToString();
     }
     public void PlaceSymbol(int index, string symbol)
     {
